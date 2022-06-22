@@ -1,26 +1,24 @@
 <template>
-  <NavbarView/>
-  <div></div>
+  <NavbarView selected="home"/>
+  <MiddleContentView/>
   <FooterView/>
-  <router-view/>
 </template>
 
 <script>
-  import NavbarView from "../components/NavbarView.vue"
-  import FooterView from "../components/FooterView.vue"
+  import NavbarView from "../components/LandingView/NavbarView.vue"
+  import FooterView from "../components/LandingView/FooterView.vue"
+  import MiddleContentView from "../components/LandingView/MiddleContentView.vue"
 
   export default {
     name: "HomeView",
     components: {
       NavbarView,
-      FooterView
+      FooterView,
+      MiddleContentView
     }
   }
 </script>
 
 <style>
-div {
-  height: 100px;
-}
 </style>
 

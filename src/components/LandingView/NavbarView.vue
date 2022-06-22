@@ -1,16 +1,18 @@
 <template>
     <div id="container">
         <router-link to="/">
-            <img src="../assets/logo.png"/>
+            <img src="../../assets/logo.png"/>
         </router-link>
         <nav>
-            <router-link class="link" :class="{ selected: selectedRoute === 'plans' }" @click="selectedRoute = 'plans'" to="/plans">Planos</router-link>
-            <router-link class="link" to="/about"  @click="selectedRoute = 'about'">Sobre Nós</router-link>
-            <router-link class="link" to="/faq"  @click="selectedRoute = 'faq'">FAQ</router-link>
+            <router-link class="link" :class="{ selected: selected === 'home' }" to="/">Home</router-link>
+            <router-link class="link" :class="{ selected: selected === 'subjects' }"  to="/subjects">Disciplinas</router-link>
+            <router-link class="link" :class="{ selected: selected === 'tests' }" to="/tests">Questões</router-link>
+            <router-link class="link" :class="{ selected: selected === 'aboutUs' }" to="/aboutUs">Sobre nós</router-link>
 
         </nav>
         <div></div>
     </div>
+    
 </template>
 
 <script>
@@ -19,9 +21,10 @@
         name: "NavbarView",
         data() {
             return {
-                selectedRoute: "plans" 
+                selectedRoute: "home" 
             }
-        }
+        },
+        props: ["selected"]
     }
 </script>
 
@@ -42,7 +45,7 @@
 
     .link {
         font-size: 20px;
-        color: #000;
+        color: var(--black);
         font-weight: bold;
         text-decoration: none;
     }
@@ -50,6 +53,6 @@
     nav {
         display: flex;
         align-items: center;
-        gap: 1.5rem;
+        gap: 2.5rem;
     }
 </style>
