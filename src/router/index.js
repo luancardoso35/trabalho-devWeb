@@ -15,8 +15,8 @@ const routes = [
     component: SubjectsView
   },
   {
-    path: '/questions',
-    name: 'question',
+    path: '/tests',
+    name: 'questions',
     component: QuestionsView
   }
 ]
