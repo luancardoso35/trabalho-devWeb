@@ -1,18 +1,21 @@
 <template>
     <NavbarView selected="subjects"/>
+    <ContentView/>
 </template>
 
 <script>
-    import NavbarView from "../components/LandingView/NavbarView.vue"
+    import ContentView from "../components/SubjectsView/ContentView.vue"
+    import NavbarView from "../components/NavbarView.vue"
 
     export default {
         name: 'SubjectsView',
         components: {
-            NavbarView
+            NavbarView,
+            ContentView
         }
     }
 </script>
 
 <style>
-
+    
 </style>

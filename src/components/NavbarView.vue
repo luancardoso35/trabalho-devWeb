@@ -1,7 +1,7 @@
 <template>
     <div id="container">
         <router-link to="/">
-            <img src="../../assets/logo.png"/>
+            <img src="../assets/logo.png"/>
         </router-link>
         <nav>
             <router-link class="link" :class="{ selected: selected === 'home' }" to="/">Home</router-link>

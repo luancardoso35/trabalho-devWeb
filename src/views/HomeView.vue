@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import NavbarView from "../components/LandingView/NavbarView.vue"
+  import NavbarView from "../components/NavbarView.vue"
   import FooterView from "../components/LandingView/FooterView.vue"
   import MiddleContentView from "../components/LandingView/MiddleContentView.vue"
 
