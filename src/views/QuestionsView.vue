@@ -1,5 +1,5 @@
 <template>
-    <NavbarView selected="subjects"/>
+    <NavbarView selected="tests"/>
     <ContentView/>
 </template>
 
