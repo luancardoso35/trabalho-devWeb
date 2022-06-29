@@ -13,3 +13,9 @@ body, html {
     -webkit-font-smoothing: antialiased;
     font-family: 'Roboto', sans-serif;
 }
+
+@media screen and (max-width:732px) {
+    html {
+        font-size: 2rem;
+    }
+}

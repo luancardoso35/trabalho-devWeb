@@ -33,7 +33,8 @@
 
     #content-container {
         text-align: center;
-        margin: 0 auto;
+        margin: auto;
+        transform: translateY(-10%);
     }
 
     #title {
@@ -66,11 +67,11 @@
         padding: 1rem 2rem;
     }
 
-    @media (min-width: 1400px) {
+    @media (min-width: 1200px) {
         #image {
             border-radius: 8px;
-            width: 600px;
-            height: 450px;
+            width: 40vw;
+            height: 60vh;
         }
 
         #container {

@@ -37,7 +37,7 @@ export default {
     font-size: 20px;
     font-weight: bold;
     background-color: var(--cyan);
-    padding: 2rem 10rem;
+    padding: 7vh 10vw;
   }
 
   #links-container {
