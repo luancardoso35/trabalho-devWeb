@@ -1,5 +1,6 @@
 {
     "lifes": 5,
-    "progress": 100
+    "progress": 100,
+    "currentLevel": 10
 }
 
