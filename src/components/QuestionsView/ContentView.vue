@@ -6,7 +6,7 @@
 
         <div id= "question-container">
             <div class="question-card">
-                <div class = "right-content">
+                <div class = "left-content">
                     <p class="subject">Matemática</p>
                     <p class="topic">Trigonometria</p>
                     <img id="coin" src="../../assets/coin.png" alt="moeda">
@@ -14,6 +14,12 @@
                 </div>
                 <div class = middle-content>
                     <p class="description">Assuntos: Teorema de pitágoras, ângulos no triângulo, classificação de triângulos, ...</p>            
+                </div>
+                <div class="right-content">
+                    <button class="start-button">
+                        <img src="../../assets/StartButton.png" alt="StartButton">
+                        <p>Começar</p>
+                    </button>
                 </div>
 
             </div>  
@@ -76,7 +82,7 @@
 
 
     }
-    .right-content{
+    .left-content{
         margin-right: 50px;
         text-align: center;
     }
@@ -91,6 +97,11 @@
         text-align: center;
 
     
+    }
+    .right-content{
+        margin-top: 1rem;
+        margin-right: 50px;
+        text-align: center;
     }
     .subject{
         margin:0 auto;
@@ -126,5 +137,15 @@
     #coin{
         width:29px;
         height:29px
+    }
+
+    .start-button{
+        background-color: transparent;
+        border: transparent;
+        
+    }
+    .start-button:hover{
+        cursor: pointer;
+        background-color: #6b6b6b39;
     }
 </style>
