@@ -16,8 +16,12 @@
                     <p class="description">Assuntos: Teorema de pitágoras, ângulos no triângulo, classificação de triângulos, ...</p>            
                 </div>
                 <div class="right-content">
+                    <button class = "details-button">
+                        <img src="../../assets/detailsButton.png" alt="Ver mais">
+                        <p style="margin:0.2rem 0.2rem">Ver detalhes</p>
+                    </button>
                     <button class="start-button">
-                        <img src="../../assets/StartButton.png" alt="StartButton">
+                        <img src="../../assets/startButton.png" alt="Começar">
                         <p>Começar</p>
                     </button>
                 </div>
@@ -71,19 +75,22 @@
     }
     .question-card{
         display: flex;
-        margin: 0 auto;
+        margin: 0 10%;
         box-sizing: border-box;
 
-
-        background: linear-gradient(180deg, rgba(83, 240, 9, 0.71) -116.9%, rgba(222, 222, 222, 0) 173.94%);
+        background: #FFFFFF;
+        border: 1px solid #000000;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        /*background: linear-gradient(180deg, rgba(83, 240, 9, 0.71) -116.9%, rgba(222, 222, 222, 0) 173.94%);
         border: 1px solid #000000;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-        border-radius: 8px;
+        */
 
 
     }
     .left-content{
-        margin-right: 50px;
+        margin-right: 20px;
         text-align: center;
     }
     .middle-content{
@@ -139,6 +146,14 @@
         height:29px
     }
 
+   .details-button{
+        background-color: transparent;
+        border: transparent;
+        
+    }
+    .details-button:hover{
+        cursor: pointer;
+    }
     .start-button{
         background-color: transparent;
         border: transparent;
@@ -146,6 +161,5 @@
     }
     .start-button:hover{
         cursor: pointer;
-        background-color: #6b6b6b39;
     }
 </style>
