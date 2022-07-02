@@ -20,7 +20,7 @@
                         <img src="../../assets/detailsButton.png" alt="Ver mais">
                         <p style="margin:0.2rem 0.2rem">Ver detalhes</p>
                     </button>
-                    <button class="start-button">
+                    <button class="start-button" @click="showModal()">
                         <img src="../../assets/startButton.png" alt="Começar">
                         <p>Começar</p>
                     </button>
@@ -28,14 +28,35 @@
 
             </div>  
         </div>
+        <QuestionModal
+            v-show="isModalVisible"
+            @close="closeModal"
+            >
+        </QuestionModal>
         
     </section>
 </template>
 
 <script>
+    import QuestionModal from './QuestionModal.vue';
     export default {
-        name: "ContentView"
+    name: "ContentView",
+    components: { QuestionModal },
+    data() {
+      return {
+        isModalVisible: true,
+      };
+    },
+    methods: {
+      showModal() {
+        this.isModalVisible = true;
+      },
+      closeModal() {
+        this.isModalVisible = false;
+      }
     }
+  };
+
 </script>
 
 <style scoped>
@@ -106,8 +127,9 @@
     
     }
     .right-content{
+        display: flex;
         margin-top: 1rem;
-        margin-right: 50px;
+        margin-right: 2%;
         text-align: center;
     }
     .subject{
