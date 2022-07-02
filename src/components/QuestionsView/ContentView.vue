@@ -17,11 +17,11 @@
                 </div>
                 <div class="right-content">
                     <button class = "details-button">
-                        <img src="../../assets/detailsButton.png" alt="Ver mais">
+                        <img src="../../assets/tests/detailsButton.png" alt="Ver mais">
                         <p style="margin:0.2rem 0.2rem">Ver detalhes</p>
                     </button>
                     <button class="start-button" @click="showModal()">
-                        <img src="../../assets/startButton.png" alt="Começar">
+                        <img src="../../assets/tests/startButton.png" alt="Começar">
                         <p>Começar</p>
                     </button>
                 </div>

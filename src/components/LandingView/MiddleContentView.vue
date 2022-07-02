@@ -8,7 +8,7 @@
             </router-link>
         </div>
         <div id="image-container">
-            <img id="image" src="../../assets/homepage.png"/>
+            <img id="image" src="../../assets/landing-page/homepage.png"/>
         </div>
     </div>
 </template>

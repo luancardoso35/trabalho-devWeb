@@ -6,7 +6,7 @@
                     Questão {{}} de {{}}
                 </p>
                 <button class="close-button" @click="close">
-                    <img src="../../assets/closeButton.png" alt="close">
+                    <img src="../../assets/tests/closeButton.png" alt="close">
                 </button>
             </div>
             
