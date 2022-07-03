@@ -28,10 +28,15 @@
 
             </div>  
         </div>
+
+        <div id="grey-div" v-show="isModalVisible"></div>
+
         <QuestionModal
             v-show="isModalVisible"
             @close="closeModal"
-            >
+            title="Matemática"
+            subject="Trigonometria"
+        >
         </QuestionModal>
         
     </section>
@@ -44,7 +49,7 @@
     components: { QuestionModal },
     data() {
       return {
-        isModalVisible: true,
+        isModalVisible: false,
       };
     },
     methods: {
@@ -183,5 +188,16 @@
     }
     .start-button:hover{
         cursor: pointer;
+    }
+
+    #grey-div {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.8;
+
     }
 </style>

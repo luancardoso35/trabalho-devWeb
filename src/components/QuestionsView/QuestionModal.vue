@@ -1,14 +1,19 @@
 <template>
     <div id="background-modal">
         <div id="inner-modal">
-            <div id="upper-container">
-                <p>
-                    Questão {{}} de {{}}
-                </p>
+            <section>
+                <div>
+                    <p id="title">{{title}}</p>
+                    <p id="subtitle">{{subject}}</p>
+                </div>
                 <button class="close-button" @click="close">
                     <img src="../../assets/tests/closeButton.png" alt="close">
                 </button>
-            </div>
+            </section>
+                <p>
+                    Questão {{}} de {{}}
+                </p>
+                
             
             <div id="content-container">
                 <p></p>
@@ -20,6 +25,7 @@
 <script>
   export default {
     name: 'QuestionModal',
+    props: ["title", "subject"],
     methods: {
       close() {
         this.$emit('close');
@@ -29,22 +35,49 @@
 </script>
 
 <style scoped>
+    section div {
+        margin-bottom: 20px;
+    }
+
+    div p {
+        margin: 10px 0;
+    }
+    section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #title {
+        font-weight: bold;
+        font-size: 150%;
+    }
+    #subtitle {
+        font-weight: bold;
+        font-size: 130%;
+        color: #777777;
+    }
+
     #background-modal{
         position: fixed;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+
     #inner-modal{
-        margin: 10% 10%;
-        vertical-align: middle;
+        padding: 1rem 4rem;
+        background:#D9D9D9;    
         border-radius: 8px;
+        width: 50%;
     }
     #upper-container{
         display: flex;
         justify-content: space-between;   
-        background:#D9D9D9;
         border-radius: 8px;
     }
 
