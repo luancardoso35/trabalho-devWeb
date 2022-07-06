@@ -19,9 +19,8 @@
     }
 
     .green {
-        background-color: green;
+        background: linear-gradient(180deg, rgba(92, 255, 16, 0.71) -116.9%, rgba(94, 227, 31, 0.71) 24.88%, rgba(222, 222, 222, 0) 329.35%);    
     }
-
 
     main {
         width: 90%;

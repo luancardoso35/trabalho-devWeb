@@ -1,19 +1,37 @@
 <template>
     <section>
-        <div id="upper-container">
-            <p id = "title">Questões</p>
+        <div id="title-container">
+            <div>
+                <p>Questões</p>
+            </div>
+            <div id="info-container">
+                <div class="level image-container">
+                    <img src="../../assets/subjects/progress.png"/>
+                    <div id="img-start">{{db.currentLevel}}</div>
+                    <div id="img-end">{{db.currentLevel+1}}</div>
+                    <div id="img-xp">350 XP</div>
+                    <div class="center"></div>
+                </div>
+                <div class="image-container">
+                    <img src="../../assets/subjects/heart.png">
+                    <span id="lifes">{{db.lifes}}</span>
+                </div>
+            </div>    
         </div>
 
         <div id= "question-container">
-            <div class="question-card">
+            <div 
+            v-for="(key) in Object.keys(db.questions)"
+            :key="key"
+            class="question-card">
                 <div class = "left-content">
-                    <p class="subject">Matemática</p>
-                    <p class="topic">Trigonometria</p>
+                    <p class="subject">{{key}}</p>
+                    <p class="topic">{{Object.keys(db.questions[key])[0]}}</p>
                     <img id="coin" src="../../assets/coin.png" alt="moeda">
-                    <p>30 xp</p>    
+                    <p id="xp">{{Object.values(db.questions[key])[0]["xp"]}} XP</p>    
                 </div>
                 <div class = middle-content>
-                    <p class="description">Assuntos: Teorema de pitágoras, ângulos no triângulo, classificação de triângulos, ...</p>            
+                    <p class="description">Assuntos: {{Object.values(db.questions[key])[0]["subjects"]}}</p>            
                 </div>
                 <div class="right-content">
                     <button class = "details-button">
@@ -36,6 +54,7 @@
             @close="closeModal"
             title="Matemática"
             subject="Trigonometria"
+            xp="30"
         >
         </QuestionModal>
         
@@ -44,12 +63,15 @@
 
 <script>
     import QuestionModal from './QuestionModal.vue';
+    import db from '../../db.json'
     export default {
     name: "ContentView",
     components: { QuestionModal },
     data() {
       return {
+        db,
         isModalVisible: false,
+        progress: db.progress / 100
       };
     },
     methods: {
@@ -65,14 +87,88 @@
 </script>
 
 <style scoped>
-    section {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0px;
-        top: 121px;
-        background:  linear-gradient(287.56deg, #8ADDDD 0%, #E0EAEA 92.19%, rgba(255, 255, 255, 0) 100%);
 
+    #lifes {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: bold;
+        font-size: 130%;
+    }
+
+    #title-container p {
+        margin: 0;
+        font-weight: bold;
+        font-size: 24px;
+    }
+
+    #title-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    }
+
+    #xp {
+        font-weight: bold;
+        font-size: 110%;
+        margin: 0.5rem 0 1rem 0;
+    }
+
+    .center {
+        width: calc(126px * v-bind(progress));
+        height: 19px;
+        background:#FABE2C;
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        transform: translateY(-60%);
+    }
+
+    #img-xp {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -60%);
+        font-weight: bold;
+        color: rgba(93, 93, 93, 1);
+    }
+
+    #img-start {
+        position: absolute;
+        top: 50%;
+        transform: translate(50%, -60%);
+        font-weight: bold;
+        color: #000;
+        font-size: 130%;
+    }
+
+    #img-end {
+        position: absolute;
+        top: 50%;
+        left: 95%;
+        transform: translate(-100%, -60%);
+        font-weight: bold;
+        font-size: 130%;
+        color: #000;
+    }
+
+    .image-container {
+        position: relative;
+        text-align: center;
+        color: #fff;
+    }
+
+    #info-container {
+        display: flex;
+        align-items: center;
+        gap: 5vw;
+    }
+
+    section {
+        background: linear-gradient(287.56deg, #8ADDDD 0%, #E0EAEA 92.19%, rgba(255, 255, 255, 0) 100%);
+        padding: 10vh 10vw;
+        height: 70vh;
     }    
     #info-container{
         display: flex;
@@ -99,17 +195,11 @@
         display: flex;
         margin: 0 10%;
         box-sizing: border-box;
-
+        margin-bottom: 1rem;
         background: #FFFFFF;
         border: 1px solid #000000;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 8px;
-        /*background: linear-gradient(180deg, rgba(83, 240, 9, 0.71) -116.9%, rgba(222, 222, 222, 0) 173.94%);
-        border: 1px solid #000000;
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-        */
-
-
     }
     .left-content{
         margin-right: 20px;
@@ -161,8 +251,6 @@
 
         color: #777777;
     }
-
-
 
     #coin{
         width:29px;

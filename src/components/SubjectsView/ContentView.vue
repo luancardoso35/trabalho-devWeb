@@ -5,7 +5,7 @@
                 <p>Disciplinas</p>
             </div>
             <div id="info-container">
-                <div class="level image-container">
+                <div class="image-container">
                     <img src="../../assets/subjects/progress.png"/>
                     <div id="img-start">{{db.currentLevel}}</div>
                     <div id="img-end">{{db.currentLevel+1}}</div>

@@ -36,10 +36,18 @@
             <footer>
                 <button 
                     id="continue-button"
-                    v-on:click="handleButtonClick()"
+                    v-on:click="handleButtonClick(db.questions[title][subject])"
+                    v-if="!showResults"
                 >
                     {{buttonText}}
                 </button>
+
+                <p
+                    id="results"
+                    v-if="showResults"
+                >
+                    Você acertou {{correctAnswers}} de {{db.questions[title][subject].tests.length}}
+                </p>
             </footer>
         </div>
     </div>
@@ -51,7 +59,7 @@ import AnswerView from '../TestAnswer/AnswerView.vue'
 
     export default {
     name: "QuestionModal",
-    props: ["title", "subject"],
+    props: ["title", "subject", "xp"],
     methods: {
         close() {
             this.$emit("close");
@@ -65,12 +73,25 @@ import AnswerView from '../TestAnswer/AnswerView.vue'
             this.selected = -1
             this.progress++;
         },
-        handleButtonClick() {
+        handleButtonClick(tests) {
             if (this.buttonText == "Verificar") {
+                if (this.selected == tests.tests[this.progress].answer) {
+                    this.correctAnswers++
+                } else {
+                    if (db.lifes > 0) {
+                        db.lifes--; 
+                    }
+                }
                 this.checkAnswer = true
                 this.buttonText = "Avançar"
             } else {
-                this.incrementQuestion()
+                if (this.progress == tests.tests.length - 1) {
+                    tests.solved = true
+                    this.showResults = true
+                    db.progress += this.xp
+                } else {
+                    this.incrementQuestion()
+                }
             }
         }
     },
@@ -80,7 +101,9 @@ import AnswerView from '../TestAnswer/AnswerView.vue'
             progress: 0,
             selected: -1,
             checkAnswer: false,
-            buttonText: "Verificar"
+            buttonText: "Verificar",
+            correctAnswers: 0,
+            showResults: false,
         };
     },
     components: { AnswerView }
@@ -88,6 +111,11 @@ import AnswerView from '../TestAnswer/AnswerView.vue'
 </script>
 
 <style scoped>
+
+    #results {
+        font-weight: bold;
+        font-size: 120%;
+    }
 
     img {
         width: 30px;
@@ -98,6 +126,7 @@ import AnswerView from '../TestAnswer/AnswerView.vue'
         margin: 2rem 0 0 1.5rem;
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     footer button {
