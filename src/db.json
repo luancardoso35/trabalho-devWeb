@@ -3,40 +3,43 @@
     "progress": 50,
     "currentLevel": 10,
 
-    "Questions": {
-        "fisica": {
-            "solved": true, 
-            "questions":[
-                {
-                    "title": "Uma das primeiras estimativas do raio da Terra é atribuída a Eratóstenes, estudioso grego que viveu, aproximdamente, entre 275 a.C. e 195 a.C. Sabendo que em Assuã, cidade localizada no sul do Egito, ao meio dia do solstício de verão, um bastão vertical não apresentava sombra, Eratóstenes decidiu investigar o que ocorreria, nas mesmas condições, em Alexandria, cidade no norte do Egito. O estudioso observou que, em Alexandria, ao meio dia do solstício de verão, um bastão vertical apresentava sombra e determinou o ângulo theta entre as direções do bastão e de incidência dos raios de sol. O valor do raio da Terra, obtido a partir de theta e da distância entre Alexandria e Assuã foi de, aproximadamente, 7500km.",
-                    "alternatives": [
-                        "junho; 7°.",
-                        "dezembro; 7°.",
-                        "junho; 23°."
-                    ],
-                    "answer": 1
-                },
-                {
-                    "title": "Uma das primeiras estimativas do raio da Terra é atribuída a Eratóstenes, estudioso grego que viveu, aproximdamente, entre 275 a.C. e 195 a.C. Sabendo que em Assuã, cidade localizada no sul do Egito, ao meio dia do solstício de verão, um bastão vertical não apresentava sombra, Eratóstenes decidiu investigar o que ocorreria, nas mesmas condições, em Alexandria, cidade no norte do Egito. O estudioso observou que, em Alexandria, ao meio dia do solstício de verão, um bastão vertical apresentava sombra e determinou o ângulo theta entre as direções do bastão e de incidência dos raios de sol. O valor do raio da Terra, obtido a partir de theta e da distância entre Alexandria e Assuã foi de, aproximadamente, 7500km.",
-                    "alternatives": [
-                        "junho; 7°.",
-                        "dezembro; 7°.",
-                        "junho; 23°."
-                    ],
-                    "answer": 1
-                },
-                {
-                    "title": "Uma das primeiras estimativas do raio da Terra é atribuída a Eratóstenes, estudioso grego que viveu, aproximdamente, entre 275 a.C. e 195 a.C. Sabendo que em Assuã, cidade localizada no sul do Egito, ao meio dia do solstício de verão, um bastão vertical não apresentava sombra, Eratóstenes decidiu investigar o que ocorreria, nas mesmas condições, em Alexandria, cidade no norte do Egito. O estudioso observou que, em Alexandria, ao meio dia do solstício de verão, um bastão vertical apresentava sombra e determinou o ângulo theta entre as direções do bastão e de incidência dos raios de sol. O valor do raio da Terra, obtido a partir de theta e da distância entre Alexandria e Assuã foi de, aproximadamente, 7500km.",
-                    "alternatives": [
-                        "junho; 7°.",
-                        "dezembro; 7°.",
-                        "junho; 23°."
-                    ],
-                    "answer": 1
+    "questions": {
+        "Matemática": 
+            {
+                "Trigonometria": {
+                    "solved": true, 
+                    "tests":
+                    [
+                        {
+                            "title": "Uma das primeiras estimativas do raio da Terra é atribuída a Eratóstenes, estudioso grego que viveu, aproximdamente, entre 275 a.C. e 195 a.C. Sabendo que em Assuã, cidade localizada no sul do Egito, ao meio dia do solstício de verão, um bastão vertical não apresentava sombra, Eratóstenes decidiu investigar o que ocorreria, nas mesmas condições, em Alexandria, cidade no norte do Egito. O estudioso observou que, em Alexandria, ao meio dia do solstício de verão, um bastão vertical apresentava sombra e determinou o ângulo theta entre as direções do bastão e de incidência dos raios de sol. O valor do raio da Terra, obtido a partir de theta e da distância entre Alexandria e Assuã foi de, aproximadamente, 7500km.",
+                            "alternatives": [
+                                "junho; 7°.",
+                                "dezembro; 7°.",
+                                "junho; 23°."
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "title": "Uma das primeiras estimativas do raio da Terra é atribuída a Eratóstenes, estudioso grego que viveu, aproximdamente, entre 275 a.C. e 195 a.C. Sabendo que em Assuã, cidade localizada no sul do Egito, ao meio dia do solstício de verão, um bastão vertical não apresentava sombra, Eratóstenes decidiu investigar o que ocorreria, nas mesmas condições, em Alexandria, cidade no norte do Egito. O estudioso observou que, em Alexandria, ao meio dia do solstício de verão, um bastão vertical apresentava sombra e determinou o ângulo theta entre as direções do bastão e de incidência dos raios de sol. O valor do raio da Terra, obtido a partir de theta e da distância entre Alexandria e Assuã foi de, aproximadamente, 7500km.",
+                            "alternatives": [
+                                "junho; 7°.",
+                                "dezembro; 7°.",
+                                "junho; 23°."
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "title": "Uma das primeiras estimativas do raio da Terra é atribuída a Eratóstenes, estudioso grego que viveu, aproximdamente, entre 275 a.C. e 195 a.C. Sabendo que em Assuã, cidade localizada no sul do Egito, ao meio dia do solstício de verão, um bastão vertical não apresentava sombra, Eratóstenes decidiu investigar o que ocorreria, nas mesmas condições, em Alexandria, cidade no norte do Egito. O estudioso observou que, em Alexandria, ao meio dia do solstício de verão, um bastão vertical apresentava sombra e determinou o ângulo theta entre as direções do bastão e de incidência dos raios de sol. O valor do raio da Terra, obtido a partir de theta e da distância entre Alexandria e Assuã foi de, aproximadamente, 7500km.",
+                            "alternatives": [
+                                "junho; 7°.",
+                                "dezembro; 7°.",
+                                "junho; 23°."
+                            ],
+                            "answer": 1
+                        }
+                    ]
                 }
-            ]
-        }
-            
+            }
     }
 }
 

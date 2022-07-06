@@ -10,39 +10,115 @@
                     <img src="../../assets/tests/closeButton.png" alt="close">
                 </button>
             </section>
-                <p>
-                    Questão {{}} de {{}}
-                </p>
-                
-            
+            <p id="progress">
+                    Questão {{progress}} de {{db.questions[title][subject].tests.length}}
+            </p>
+
             <div id="content-container">
-                <p></p>
+                <p>{{db.questions[title][subject].tests[progress].title}}</p>
             </div>
+
+            <p id="lifes">
+                Vidas restantes: <span>{{db.lifes}}</span>
+            </p>
+
+            <section id="alternatives">
+                <AnswerView
+                    v-on:click="selected = index" 
+                    :key="alternative" 
+                    v-for="(alternative, index) in db.questions[title][subject].tests[progress].alternatives" 
+                    :text="db.questions[title][subject].tests[progress].alternatives[index]"
+                />
+            </section>
+
+            <footer>
+                <button id="continue-button">
+                    Avançar
+                </button>
+            </footer>
         </div>
     </div>
 </template>
 
 <script>
-  export default {
-    name: 'QuestionModal',
+    import db from '../../db.json'
+import AnswerView from '../TestAnswer/AnswerView.vue'
+
+    export default {
+    name: "QuestionModal",
     props: ["title", "subject"],
     methods: {
-      close() {
-        this.$emit('close');
-      },
+        close() {
+            this.$emit("close");
+        },
+        incrementQuestion() {
+            this.progress++;
+        }
     },
-  };
+    data() {
+        return {
+            db,
+            progress: 1,
+            selected: -1,
+        };
+    },
+    components: { AnswerView }
+};
 </script>
 
 <style scoped>
-    section div {
+    footer {
+        margin: 2rem 0 0 1.5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    footer button {
+        border-radius: 8px;
+        color: #FFF;
+        border: none;
+        background-color: #1275AE;
+        width: 10vw;
+        height: 5vh;
+        font-size: 120%;
+        cursor: pointer;
+    }
+
+    #alternatives {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    span {
+        color: #F44336;
+    }
+
+    #lifes {
+        font-size: 110%;
+        margin-bottom: 2rem;
+        font-weight: bold;
+    }
+
+    #progress {
+        font-weight: bold;
+        font-size: 110%;
+        margin-bottom: 1rem;
+    }
+
+    #content-container {
+        font-size: 105%;
+        padding: 0 2rem;
+    }
+
+    #inner-modal section div {
         margin-bottom: 20px;
     }
 
     div p {
         margin: 10px 0;
     }
-    section {
+    #inner-modal section {
         display: flex;
         justify-content: space-between;
         align-items: center;
