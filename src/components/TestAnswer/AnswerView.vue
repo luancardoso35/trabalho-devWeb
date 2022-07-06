@@ -1,18 +1,28 @@
 <template>
-    <main>
+    <main :class="color">
         <input type="radio" :checked="selected" name="group"/>
         {{text}}
+       
     </main>
 </template>
 
 <script>
     export default {
         name: "AnswerView",
-        props: ["text", "selected"]
+        props: ["text", "selected", "correct", "color"],
     }
 </script>
 
 <style scoped>
+    .white {
+        background-color: #FFF;
+    }
+
+    .green {
+        background-color: green;
+    }
+
+
     main {
         width: 90%;
         border: 1px solid black;
@@ -21,7 +31,6 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        background-color: white;
     }
 
     input {

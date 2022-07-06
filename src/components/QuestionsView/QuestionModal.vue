@@ -7,14 +7,14 @@
                     <p id="subtitle">{{subject}}</p>
                 </div>
                 <button class="close-button" @click="close">
-                    <img src="../../assets/tests/closeButton.png" alt="close">
+                    <img src="../../assets/tests/closeButton.png" alt="close" v-on:click="close()">
                 </button>
             </section>
             <p id="progress">
-                    Questão {{progress}} de {{db.questions[title][subject].tests.length}}
+                    Questão {{progress+1}} de {{db.questions[title][subject].tests.length}}
             </p>
 
-            <div id="content-container">
+            <div id="title-container">
                 <p>{{db.questions[title][subject].tests[progress].title}}</p>
             </div>
 
@@ -23,17 +23,22 @@
             </p>
 
             <section id="alternatives">
-                <AnswerView
-                    v-on:click="selected = index" 
-                    :key="alternative" 
-                    v-for="(alternative, index) in db.questions[title][subject].tests[progress].alternatives" 
-                    :text="db.questions[title][subject].tests[progress].alternatives[index]"
-                />
+                    <AnswerView
+                        :key="alternative" 
+                        v-for="(alternative, index) in db.questions[title][subject].tests[progress].alternatives"
+                        v-on:click="selected = index" 
+                        :selected="selected == index"
+                        :text="db.questions[title][subject].tests[progress].alternatives[index]"
+                        :color="(checkAnswer && index == db.questions[title][subject].tests[progress].answer) ? 'green' : 'white'"
+                    />
             </section>
 
             <footer>
-                <button id="continue-button">
-                    Avançar
+                <button 
+                    id="continue-button"
+                    v-on:click="handleButtonClick()"
+                >
+                    {{buttonText}}
                 </button>
             </footer>
         </div>
@@ -50,16 +55,32 @@ import AnswerView from '../TestAnswer/AnswerView.vue'
     methods: {
         close() {
             this.$emit("close");
+            this.checkAnswer = false
+            this.buttonText = "Verificar"
+            this.selected = -1
         },
         incrementQuestion() {
+            this.checkAnswer = false
+            this.buttonText = "Verificar"
+            this.selected = -1
             this.progress++;
+        },
+        handleButtonClick() {
+            if (this.buttonText == "Verificar") {
+                this.checkAnswer = true
+                this.buttonText = "Avançar"
+            } else {
+                this.incrementQuestion()
+            }
         }
     },
     data() {
         return {
             db,
-            progress: 1,
+            progress: 0,
             selected: -1,
+            checkAnswer: false,
+            buttonText: "Verificar"
         };
     },
     components: { AnswerView }
@@ -67,6 +88,12 @@ import AnswerView from '../TestAnswer/AnswerView.vue'
 </script>
 
 <style scoped>
+
+    img {
+        width: 30px;
+        height: 30px;
+    }
+
     footer {
         margin: 2rem 0 0 1.5rem;
         display: flex;
@@ -106,7 +133,7 @@ import AnswerView from '../TestAnswer/AnswerView.vue'
         margin-bottom: 1rem;
     }
 
-    #content-container {
+    #title-container {
         font-size: 105%;
         padding: 0 2rem;
     }
