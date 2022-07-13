@@ -1,4 +1,8 @@
-# spa-evandro
+# Site de questões gamificado de vestibular
+![image](https://user-images.githubusercontent.com/51725829/178745353-edb84608-0e46-4089-b078-c87ba9a17ffe.png)
+
+A página apresentada neste site aprensenta um site para realizar questões de vestibular de forma gamificada. Nele, o usuário pode acessar as páginas individuais de cada disciplina, bem como acessar uma página de questões. Para acessar essas páginas, o usuário precisa clicar nas respectivas opções no menu superior.
+Além disso, para realizar as questões, o usuário precisa clicar na opção "Começar" e em seguida um modal será aberto com uma questão. Em seguida, o usuário poderá selecionar a opção de resposta e passar para a próxima questão
 
 ## Project setup
 ```
