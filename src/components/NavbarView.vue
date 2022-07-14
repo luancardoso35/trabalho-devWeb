@@ -7,7 +7,6 @@
             <router-link class="link" :class="{ selected: selected === 'home' }" to="/">Home</router-link>
             <router-link class="link" :class="{ selected: selected === 'subjects' }"  to="/subjects">Disciplinas</router-link>
             <router-link class="link" :class="{ selected: selected === 'tests' }" to="/tests">Questões</router-link>
-            <router-link class="link" :class="{ selected: selected === 'aboutUs' }" to="/aboutUs">Sobre nós</router-link>
 
         </nav>
         <div></div>

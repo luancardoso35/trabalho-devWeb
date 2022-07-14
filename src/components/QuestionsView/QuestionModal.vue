@@ -6,7 +6,7 @@
                     <p id="title">{{title}}</p>
                     <p id="subtitle">{{subject}}</p>
                 </div>
-                <button class="close-button" @click="close">
+                <button class="close-button" @click="close(db.questions[title][subject])">
                     <img src="../../assets/tests/closeButton.png" alt="close" v-on:click="close()">
                 </button>
             </section>
@@ -59,13 +59,22 @@ import AnswerView from '../TestAnswer/AnswerView.vue'
 
     export default {
     name: "QuestionModal",
-    props: ["title", "subject", "xp"],
+    props: ["title", "subject", "xp", ],
     methods: {
-        close() {
+        close(tests) {
             this.$emit("close");
+
+            if (this.showResults) {
+                tests.solved = true
+            }
             this.checkAnswer = false
             this.buttonText = "Verificar"
             this.selected = -1
+            this.progress = 0,
+            this.selected = -1,
+            this.buttonText = "Verificar",
+            this.correctAnswers = 0,
+            this.showResults = false
         },
         incrementQuestion() {
             this.checkAnswer = false
@@ -86,9 +95,14 @@ import AnswerView from '../TestAnswer/AnswerView.vue'
                 this.buttonText = "Avançar"
             } else {
                 if (this.progress == tests.tests.length - 1) {
-                    tests.solved = true
                     this.showResults = true
-                    db.progress += this.xp
+                    
+                    db.progress += Math.round(this.correctAnswers * (tests.xp / tests.tests.length))
+                    tests.correctAnswers = this.correctAnswers
+                    if (db.progress >= 100) {
+                        db.currentLevel += 1
+                        db.progress -= 100
+                    }
                 } else {
                     this.incrementQuestion()
                 }

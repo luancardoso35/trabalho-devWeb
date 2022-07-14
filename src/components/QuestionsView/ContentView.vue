@@ -1,29 +1,13 @@
 <template>
     <section>
-        <div id="title-container">
-            <div>
-                <p>Questões</p>
-            </div>
-            <div id="info-container">
-                <div class="level image-container">
-                    <img src="../../assets/subjects/progress.png"/>
-                    <div id="img-start">{{db.currentLevel}}</div>
-                    <div id="img-end">{{db.currentLevel+1}}</div>
-                    <div id="img-xp">350 XP</div>
-                    <div class="center"></div>
-                </div>
-                <div class="image-container">
-                    <img src="../../assets/subjects/heart.png">
-                    <span id="lifes">{{db.lifes}}</span>
-                </div>
-            </div>    
-        </div>
+        <TopContentView title="Questões" :key="updateLife"/>
 
         <div id= "question-container">
             <div 
-            v-for="(key) in Object.keys(db.questions)"
-            :key="key"
-            class="question-card">
+                v-for="(key, index) in Object.keys(db.questions)"
+                :key="key"
+                v-bind:class="{ 'solved': Object.values(db.questions[key])[0].solved, 'question-card': true}"
+            >
                 <div class = "left-content">
                     <p class="subject">{{key}}</p>
                     <p class="topic">{{Object.keys(db.questions[key])[0]}}</p>
@@ -34,29 +18,39 @@
                     <p class="description">Assuntos: {{Object.values(db.questions[key])[0]["subjects"]}}</p>            
                 </div>
                 <div class="right-content">
-                    <button class = "details-button">
-                        <img src="../../assets/tests/detailsButton.png" alt="Ver mais">
-                        <p style="margin:0.2rem 0.2rem">Ver detalhes</p>
-                    </button>
-                    <button class="start-button" @click="showModal()">
+                    <button 
+                        v-if="!Object.values(db.questions[key])[0].solved" 
+                        v-on:click="selectButton(index)" 
+                        class="start-button" 
+                        @click="showModal()"
+                    >
                         <img src="../../assets/tests/startButton.png" alt="Começar">
                         <p>Começar</p>
                     </button>
+                    <div class="results" v-if="Object.values(db.questions[key])[0].solved">
+                        <p>
+                            Resultado: 
+                        </p>
+                        {{Object.values(db.questions[key])[0].correctAnswers}} de {{Object.values(db.questions[key])[0].tests.length}}
+                    </div>
                 </div>
-
             </div>  
         </div>
 
-        <div id="grey-div" v-show="isModalVisible"></div>
+        <div 
+            id="grey-div" 
+            v-if="selectedQuestion !== -1 && !Object.values(db.questions[Object.keys(db.questions)[selectedQuestion]])[0].solved"
+            v-show="isModalVisible">
+        </div>
 
         <QuestionModal
+            v-if="selectedQuestion !== -1 && !Object.values(db.questions[Object.keys(db.questions)[selectedQuestion]])[0].solved"
             v-show="isModalVisible"
             @close="closeModal"
-            title="Matemática"
-            subject="Trigonometria"
-            xp="30"
-        >
-        </QuestionModal>
+            :title='Object.keys(db.questions)[selectedQuestion]'
+            :subject='Object.keys(db.questions[Object.keys(db.questions)[selectedQuestion]])[0]'
+            :xp='Object.values(db.questions[Object.keys(db.questions)[selectedQuestion]])[0].xp'
+        />
         
     </section>
 </template>
@@ -64,57 +58,46 @@
 <script>
     import QuestionModal from './QuestionModal.vue';
     import db from '../../db.json'
+    import TopContentView from '../TopContentInfo/TopContentView.vue';
     export default {
     name: "ContentView",
-    components: { QuestionModal },
+    components: { QuestionModal, TopContentView },
     data() {
       return {
         db,
         isModalVisible: false,
-        progress: db.progress / 100
+        progress: db.progress / 100,
+        selectedQuestion: -1,
+        updateLife:0
       };
     },
     methods: {
       showModal() {
         this.isModalVisible = true;
       },
+      selectButton(index) {
+        this.selectedQuestion = index
+      },
       closeModal() {
         this.isModalVisible = false;
+        this.updateLife+=1;
       }
     }
   };
 
 </script>
 
-<style scoped>
+<style scoped> 
 
-    #lifes {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    .results {
+        margin: auto;
         font-weight: bold;
-        font-size: 130%;
     }
 
-    #title-container p {
+    .results p {
         margin: 0;
-        font-weight: bold;
-        font-size: 24px;
+        margin-bottom: 10px;
     }
-
-    #title-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-    }
-
-    #xp {
-        font-weight: bold;
-        font-size: 110%;
-        margin: 0.5rem 0 1rem 0;
-    }
-
     .center {
         width: calc(126px * v-bind(progress));
         height: 19px;
@@ -125,44 +108,10 @@
         transform: translateY(-60%);
     }
 
-    #img-xp {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%, -60%);
-        font-weight: bold;
-        color: rgba(93, 93, 93, 1);
-    }
-
-    #img-start {
-        position: absolute;
-        top: 50%;
-        transform: translate(50%, -60%);
-        font-weight: bold;
-        color: #000;
-        font-size: 130%;
-    }
-
-    #img-end {
-        position: absolute;
-        top: 50%;
-        left: 95%;
-        transform: translate(-100%, -60%);
-        font-weight: bold;
-        font-size: 130%;
-        color: #000;
-    }
-
     .image-container {
         position: relative;
         text-align: center;
         color: #fff;
-    }
-
-    #info-container {
-        display: flex;
-        align-items: center;
-        gap: 5vw;
     }
 
     section {
@@ -174,6 +123,7 @@
         display: flex;
         float: right;
     }
+
     #title{
         margin-top: 0.8rem;
         margin-left: 2.0rem;
@@ -199,6 +149,13 @@
         background: #FFFFFF;
         border: 1px solid #000000;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+    }
+
+    .solved {
+        background: linear-gradient(180deg, rgba(83, 240, 9, 0.71) -116.9%, rgba(222, 222, 222, 0) 173.94%);
+        border: 1px solid #000000;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         border-radius: 8px;
     }
     .left-content{

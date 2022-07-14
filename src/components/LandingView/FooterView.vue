@@ -4,22 +4,22 @@
       Siga a gente:
       <div class="link">
         <img class="img-link" src="../../assets/social-media-logo/linkedin-logo.png"/>
-        <span>NomeDoSite</span>
+        <span>VestGame</span>
       </div>
 
       <div class="link">
         <img class="img-link" src="../../assets/social-media-logo/insta-logo.png"/>
-        <span>@nomeDoSite</span>
+        <span>@vestGame</span>
       </div>
 
       <div class="link">
         <img class="img-link" src="../../assets/social-media-logo/twitter-logo.png"/>
-        <span>@nomeDoSite</span>
+        <span>@vestGame</span>
       </div>
 
       <div class="link">
         <img class="img-link" src="../../assets/social-media-logo/youtube-logo.png"/>
-        <span>/nomeDoSite</span>
+        <span>/vestGameYT</span>
       </div>
     </section>
   </footer>

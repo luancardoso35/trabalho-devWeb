@@ -18,6 +18,11 @@ const routes = [
     path: '/tests',
     name: 'questions',
     component: QuestionsView
+  },
+  {
+    path: '/tests/:pathMatch(.*)*',
+    name: 'questions',
+    component: QuestionsView
   }
 ]
 

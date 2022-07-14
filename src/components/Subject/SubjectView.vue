@@ -1,8 +1,8 @@
 <template>
     <div id="subject-container">
-        <a>
-        <img :src="require(`@/assets/subjects/${filename}`)" alt="Imagem da disciplina">
-        <p id="title">{{title}}</p>
+        <a v-bind:href="'/tests/' + urlName">
+            <img :src="require(`@/assets/subjects/${filename}`)" alt="Imagem da disciplina">
+            <p id="title">{{title}}</p>
         </a>
         <p id="subtitle">Seu rank: {{rank}}º de {{total}}</p>
     </div>
@@ -11,17 +11,20 @@
 <script>
     export default {
         name: "SubjectView",
-        props: ["filename", "title", "rank", "total"],
+        props: ["filename", "title", "rank", "total", "urlName"],
     }
 </script>
 
 <style scoped>
     a {
         text-align: center;
+        color: black;
+        text-decoration: none;
     }
 
     a:hover {
         text-decoration: underline;
+        color: black;
     }
 
     #subject-container {

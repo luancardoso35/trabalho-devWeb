@@ -1,15 +1,16 @@
 {
     "lifes": 5,
-    "progress": 50,
+    "progress": 40,
     "currentLevel": 10,
 
     "questions": {
         "Matemática": 
             {
                 "Trigonometria": {
-                    "solved": false, 
-                    "xp": 20,
+                    "solved": true, 
+                    "xp": 50,
                     "subjects": "Teorema de pitágoras, ângulos no triângulo, classificação de triângulos, ...",
+                    "correctAnswers": 2,
                     "tests":
                     [
                         {
@@ -43,25 +44,28 @@
                 }
             },
 
-            "F": 
+            "Física": 
             {
-                "Trigonometria": {
+                "Mecânica": {
                     "solved": false, 
-                    "xp": 20,
-                    "subjects": "Teorema de pitágoras, ângulos no triângulo, classificação de triângulos, ...",
+                    "xp": 50,
+                    "subjects": "Cinemática, dinâmica, hidrostática, ...",
+                    "correctAnswers": -1,  
                     "tests":
                     [
                         {
-                            "title": "Uma das primeiras estimativas do raio da Terra é atribuída a Eratóstenes, estudioso grego que viveu, aproximdamente, entre 275 a.C. e 195 a.C. Sabendo que em Assuã, cidade localizada no sul do Egito, ao meio dia do solstício de verão, um bastão vertical não apresentava sombra, Eratóstenes decidiu investigar o que ocorreria, nas mesmas condições, em Alexandria, cidade no norte do Egito. O estudioso observou que, em Alexandria, ao meio dia do solstício de verão, um bastão vertical apresentava sombra e determinou o ângulo theta entre as direções do bastão e de incidência dos raios de sol. O valor do raio da Terra, obtido a partir de theta e da distância entre Alexandria e Assuã foi de, aproximadamente, 7500km.",
+                            "title": "Em um dia ensolarado e ventilado, uma pessoa, com cabelos de fios finos e lisos, está em movimento em relação ao chão. Esta pessoa vira rapidamente a cabeça para direita, enquanto caminha. Assinale a alternativa correta, considerando o texto desta questão, em um instante de tempo antes de terminar de virar a cabeça.",
                             "alternatives": [
-                                "junho; 7°.",
-                                "dezembro; 7°.",
-                                "junho; 23°."
+                                "Os dentes superiores estão em movimento em relação ao nariz.",
+                                "O nariz está em repouso em relação a nuca.",
+                                "O joelho direito está em repouso em relação ao calcanhar do pé esquerdo.",
+                                "O umbigo está em repouso em relação ao cotovelo direito.",
+                                "O chão está em repouso em relação a ponta do queixo."
                             ],
                             "answer": 1
                         },
                         {
-                            "title": "AAAAAA das primeiras estimativas do raio da Terra é atribuída a Eratóstenes, estudioso grego que viveu, aproximdamente, entre 275 a.C. e 195 a.C. Sabendo que em Assuã, cidade localizada no sul do Egito, ao meio dia do solstício de verão, um bastão vertical não apresentava sombra, Eratóstenes decidiu investigar o que ocorreria, nas mesmas condições, em Alexandria, cidade no norte do Egito. O estudioso observou que, em Alexandria, ao meio dia do solstício de verão, um bastão vertical apresentava sombra e determinou o ângulo theta entre as direções do bastão e de incidência dos raios de sol. O valor do raio da Terra, obtido a partir de theta e da distância entre Alexandria e Assuã foi de, aproximadamente, 7500km.",
+                            "title": "Quando um paraquedista abre seu paraquedas, a intensidade R da força de resistência do ar é, em geral, proporcional ao quadrado do módulo V da velocidade com que o paraquedista cai. Para um determinado paraquedista, quando a velocidade de queda é de 20 m/s, a força de resistência do ar é de 40 Newtons. A expressão algébrica que expressa corretamente a relação existente entre R e V para esse paraquedista é",
                             "alternatives": [
                                 "junho; 7°.",
                                 "dezembro; 7°.",
