@@ -1,6 +1,6 @@
 <template>
     <div id="subject-container">
-        <a v-bind:href="'/tests/' + urlName">
+        <a v-bind:href="/tests/">
             <img :src="require(`@/assets/subjects/${filename}`)" alt="Imagem da disciplina">
             <p id="title">{{title}}</p>
         </a>
