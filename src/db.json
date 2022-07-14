@@ -2,7 +2,13 @@
     "lifes": 5,
     "progress": 40,
     "currentLevel": 10,
-
+    "rankings":{
+        "matemática":1,
+        "física":23,
+        "química":7,
+        "português":43
+    },
+ 
     "questions": {
         "Matemática": 
             {

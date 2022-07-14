@@ -2,10 +2,10 @@
     <section>
         <TopContentView title="Disciplinas"/>
         <div id="content-container">
-            <SubjectView title="Matemática" filename="EllipseMat.png" rank="1" total="70"/>
-            <SubjectView title="Física" filename="EllipsePhysics.png" rank="40" total="70"/>
-            <SubjectView title="Química" filename="EllipseQuimica.png" rank="44" total="70"/>
-            <SubjectView title="Português" filename="EllipsePort.png" rank="5" total="70"/>
+            <SubjectView title="Matemática" filename="EllipseMat.png" :rank=db.rankings.matemática total="70"/>
+            <SubjectView title="Física" filename="EllipsePhysics.png" :rank=db.rankings.física total="70"/>
+            <SubjectView title="Química" filename="EllipseQuimica.png" :rank=db.rankings.química total="70"/>
+            <SubjectView title="Português" filename="EllipsePort.png" :rank=db.rankings.português total="70"/>
         </div>
     </section>
 </template>
