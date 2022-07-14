@@ -13,36 +13,36 @@
         "Matemática": 
             {
                 "Trigonometria": {
-                    "solved": true, 
+                    "solved": false, 
                     "xp": 50,
                     "subjects": "Teorema de pitágoras, ângulos no triângulo, classificação de triângulos, ...",
-                    "correctAnswers": 2,
+                    "correctAnswers": -1,
                     "tests":
                     [
                         {
-                            "title": "Uma das primeiras estimativas do raio da Terra é atribuída a Eratóstenes, estudioso grego que viveu, aproximdamente, entre 275 a.C. e 195 a.C. Sabendo que em Assuã, cidade localizada no sul do Egito, ao meio dia do solstício de verão, um bastão vertical não apresentava sombra, Eratóstenes decidiu investigar o que ocorreria, nas mesmas condições, em Alexandria, cidade no norte do Egito. O estudioso observou que, em Alexandria, ao meio dia do solstício de verão, um bastão vertical apresentava sombra e determinou o ângulo theta entre as direções do bastão e de incidência dos raios de sol. O valor do raio da Terra, obtido a partir de theta e da distância entre Alexandria e Assuã foi de, aproximadamente, 7500km.",
+                            "title": "Se f e g são funções reais definidas por f(x) = 1 - 2x /1+ x2 ; g(x) = tg(x), - π/2 < x < π/2 então, para  - π/2 < x < π/2 , a função f o g é definida por:",
                             "alternatives": [
-                                "junho; 7°.",
-                                "dezembro; 7°.",
-                                "junho; 23°."
+                                "f o g(x) = cos2(x) - sen(2x)",
+                                "f o g(x) = sen2(x) - sen3(2x)",
+                                "f o g(x) = sec2(x) - tg(x)"
                             ],
-                            "answer": 1
+                            "answer": 0
                         },
                         {
-                            "title": "AAAAAA das primeiras estimativas do raio da Terra é atribuída a Eratóstenes, estudioso grego que viveu, aproximdamente, entre 275 a.C. e 195 a.C. Sabendo que em Assuã, cidade localizada no sul do Egito, ao meio dia do solstício de verão, um bastão vertical não apresentava sombra, Eratóstenes decidiu investigar o que ocorreria, nas mesmas condições, em Alexandria, cidade no norte do Egito. O estudioso observou que, em Alexandria, ao meio dia do solstício de verão, um bastão vertical apresentava sombra e determinou o ângulo theta entre as direções do bastão e de incidência dos raios de sol. O valor do raio da Terra, obtido a partir de theta e da distância entre Alexandria e Assuã foi de, aproximadamente, 7500km.",
+                            "title": "Seja H um hexágono regular cujo centro é o ponto O. Se X e Y são dois vértices consecutivos de H, o ângulo XÔY é chamado de ângulo central relativo ao lado XY do hexágono. Se n é a medida, em graus, de cada ângulo central de H e m é a medida, em graus, de cada um dos ângulos internos de H, então, cos2(m+n) + sen2(m–n) é igual a",
                             "alternatives": [
-                                "junho; 7°.",
-                                "dezembro; 7°.",
-                                "junho; 23°."
+                                "1,25.",
+                                "2,00.",
+                                "1,00."
                             ],
-                            "answer": 1
+                            "answer": 2
                         },
                         {
-                            "title": "Uma das primeiras estimativas do raio da Terra é atribuída a Eratóstenes, estudioso grego que viveu, aproximdamente, entre 275 a.C. e 195 a.C. Sabendo que em Assuã, cidade localizada no sul do Egito, ao meio dia do solstício de verão, um bastão vertical não apresentava sombra, Eratóstenes decidiu investigar o que ocorreria, nas mesmas condições, em Alexandria, cidade no norte do Egito. O estudioso observou que, em Alexandria, ao meio dia do solstício de verão, um bastão vertical apresentava sombra e determinou o ângulo theta entre as direções do bastão e de incidência dos raios de sol. O valor do raio da Terra, obtido a partir de theta e da distância entre Alexandria e Assuã foi de, aproximadamente, 7500km.",
+                            "title": "No plano, com o sistema de coordenadas cartesianas usual, a interseção dos gráficos das funções reais de variável real f(x)=sen(x) e g(x)=cos(x) são, para cada número inteiro k, os pontos P(xk, yk). Então, os possíveis valores para yk são",
                             "alternatives": [
-                                "junho; 7°.",
-                                "dezembro; 7°.",
-                                "junho; 23°."
+                                "√2/2 e – √2/2",
+                                "√2/3 e – √2/3 ",
+                                "√3/3 e – √3/3"
                             ],
                             "answer": 1
                         }
@@ -82,13 +82,105 @@
                             "answer": 1
                         },
                         {
-                            "title": "Uma das primeiras estimativas do raio da Terra é atribuída a Eratóstenes, estudioso grego que viveu, aproximdamente, entre 275 a.C. e 195 a.C. Sabendo que em Assuã, cidade localizada no sul do Egito, ao meio dia do solstício de verão, um bastão vertical não apresentava sombra, Eratóstenes decidiu investigar o que ocorreria, nas mesmas condições, em Alexandria, cidade no norte do Egito. O estudioso observou que, em Alexandria, ao meio dia do solstício de verão, um bastão vertical apresentava sombra e determinou o ângulo theta entre as direções do bastão e de incidência dos raios de sol. O valor do raio da Terra, obtido a partir de theta e da distância entre Alexandria e Assuã foi de, aproximadamente, 7500km.",
+                            "title": "Calcule a velocidade média de um corpo, em m/s, que percorre uma avenida de 18 km, durante um intervalo de tempo de 6 minutos.",
                             "alternatives": [
-                                "junho; 7°.",
-                                "dezembro; 7°.",
-                                "junho; 23°."
+                                "45 m/s",
+                                "50 m/s",
+                                "30 m/s",
+                                "54 m/s",
+                                "10 m/s"
                             ],
                             "answer": 1
+                        }
+                    ]
+                }
+            },
+
+            "Química": {
+                "Orgânica": {
+                    "solved": false, 
+                    "xp": 70,
+                    "subjects": "Funções orgânicas, ligações, tetravalência do carbono, ...",
+                    "correctAnswers": -1,  
+                    "tests":
+                    [
+                        {
+                            "title": "Uma indústria farmacêutica utiliza propanona como solvente na produção de vitaminas. A propanona é obtida a partir da reação de oxidação de um composto orgânico com KMnO4 em meio ácido. O composto orgânico usado como reagente nessa oxidação é nomeado por:",
+                            "alternatives": [
+                                "ácido propanoico",
+                                "2-cloropropano",
+                                "propan-2-ol",
+                                "propanal"
+                            ],
+                            "answer": 3
+                        },
+                        {
+                            "title": "A substância que pode ser obtida a partir da reação de um haleto orgânico com metóxido de sódio é denominada",
+                            "alternatives": [
+                                "éter.",
+                                "cetona.",
+                                "ácido carboxílico.",
+                                "éster."
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "title": "Os álcoois são compostos orgânicos caracterizados pelo grupo hidroxila (OH) ligado a um carbono saturado de uma cadeia carbônica. O grupo funcional dos álcoois é representado por R - OH, em que R representa um grupo alquila. Dependendo do átomo de carbono do grupo R em que a hidroxila estiver ligada, os álcoois são classificados em primários, secundários ou terciários. Assim, é correto afirmar que",
+                            "alternatives": [
+                                "propan-2-ol é um álcool primário.",
+                                "butan-2-ol é um álcool terciário.",
+                                "2-metil-propan-2-ol é um álcool secundário.",
+                                "2,3-dimetil-butan-2-ol é um álcool terciário."
+                            ],
+                            "answer": 1
+                        }
+                    ]
+                }
+            },
+
+            "Português": {
+                "Gramática": {
+                    "solved": false, 
+                    "xp": 70,
+                    "subjects": "Funções orgânicas, ligações, tetravalência do carbono, ...",
+                    "correctAnswers": -1,  
+                    "tests":
+                    [
+                        {
+                            "title": "Baseando-se em termos práticos, Veríssimo diz: “Não me interessa seu passado, suas origens” (l. 23); o autor refere-se às palavras por óbvio, referindo-se, muito possivelmente, aos seus dados etimológicos, metaplasmáticos; no entanto, há um tipo de gramática cujo objetivo é o “passado” de determinada língua, isto é, o “estudo das mudanças sucessivas dos sistemas (fonético, morfológico, gramatical) de uma língua” (HOUAISS, 2009), numa perspectiva diacrônica. Está-se falando da gramática:Baseando-se em termos práticos, Veríssimo diz: “Não me interessa seu passado, suas origens” (l. 23); o autor refere-se às palavras por óbvio, referindo-se, muito possivelmente, aos seus dados etimológicos, metaplasmáticos; no entanto, há um tipo de gramática cujo objetivo é o “passado” de determinada língua, isto é, o “estudo das mudanças sucessivas dos sistemas (fonético, morfológico, gramatical) de uma língua” (HOUAISS, 2009), numa perspectiva diacrônica. Está-se falando da gramática:",
+                            "alternatives": [
+                                "histórica.",
+                                "descritiva.",
+                                "normativa.",
+                                "comparativa."
+                            ],
+                            "answer": 3
+                        },
+                        {
+                            "title": "Assinale a alternativa em que o significado do radical esteja errado: ",
+                            "alternatives": [
+                                "hidro: água (exemplo: hidráulico) ",
+
+                                "pisci: peixe (exemplo: piscicultura) ",
+
+                                "bio: vida (exemplo biologia) ",
+
+                                "agri: campo (exemplo: agricultura) ",
+
+                                "antropo: antigo (exemplo: antropologia)"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "title": "Assinale a alternativa em que a forma está destacada e classificada corretamente.",
+                            "alternatives": [
+                                "IN-venção: prefixo.",
+                                "ESTUDIOSO-s: radical.",
+                                "cifrad- A: vogal temática.",
+                                "rapaziad- A: desinência de gênero.",
+                                "pode- MOS: desinência número-pessoal."
+                            ],
+                            "answer": 4
                         }
                     ]
                 }
