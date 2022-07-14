@@ -62,14 +62,16 @@
                                 "O umbigo está em repouso em relação ao cotovelo direito.",
                                 "O chão está em repouso em relação a ponta do queixo."
                             ],
-                            "answer": 1
+                            "answer": 0
                         },
                         {
                             "title": "Quando um paraquedista abre seu paraquedas, a intensidade R da força de resistência do ar é, em geral, proporcional ao quadrado do módulo V da velocidade com que o paraquedista cai. Para um determinado paraquedista, quando a velocidade de queda é de 20 m/s, a força de resistência do ar é de 40 Newtons. A expressão algébrica que expressa corretamente a relação existente entre R e V para esse paraquedista é",
                             "alternatives": [
-                                "junho; 7°.",
-                                "dezembro; 7°.",
-                                "junho; 23°."
+                                "R = (V^2)/2",
+                                "R =  (V^2)/10",
+                                "R^2 = V/10",
+                                "R^2 = V/2",
+                                "R^2 = (V^2)/10"
                             ],
                             "answer": 1
                         },
