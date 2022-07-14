@@ -117,7 +117,7 @@
     section {
         background: linear-gradient(287.56deg, #8ADDDD 0%, #E0EAEA 92.19%, rgba(255, 255, 255, 0) 100%);
         padding: 10vh 10vw;
-        height: 70vh;
+        
     }    
     #info-container{
         display: flex;
