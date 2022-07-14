@@ -10,7 +10,7 @@
   Para realizar as questões, o usuário precisa clicar na opção "Começar" e em seguida um modal será aberto com uma questão. Em seguida, o usuário poderá selecionar a opção de resposta e passar para a próxima questão. As respostas certas irão somar pontos de experiência para o usuário enquanto as erradas irão subtrair seus pontos de vida.
 
 ## Autores
-O trabalho foi realizado por Luan Cardoso e Matheo Marumo. Ambos participaram da concepção da ideia do site e desenvolveram um protótipo em Figma. A página inicial e a página de questões foram feitas em conjunto pelos dois autores, a página de disciplinas foi feita por Luan.
+O trabalho foi realizado por Luan Cardoso e Matheo Marumo. Ambos participaram da concepção da ideia do site e desenvolveram um protótipo em Figma. A codificação do site foi feita em conjunto pelos dois autores.
 ## Project setup
 ```
 npm install
